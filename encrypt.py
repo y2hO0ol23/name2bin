@@ -1,5 +1,3 @@
-#profile rgb value : #18191b
-
 #version 2
 name = ""
 if len(name) <= 3:
