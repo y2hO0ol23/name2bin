@@ -1,6 +1,6 @@
 #profile rgb value : #18191b
 
-
+#version 2
 name = ""
 if len(name) <= 3:
     name += "디코이름난독화"
@@ -14,3 +14,10 @@ for i in range(0,len(name),2):
         result[j] ^= int(bindata[j])
 
 print("".join(map(str,result)))
+
+
+#version 1
+"""
+name = "익명" #must be 2 character
+print(bin(ord(name[0]))[2:].zfill(16) + bin(ord(name[1]))[2:].zfill(16))
+"""
