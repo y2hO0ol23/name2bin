@@ -1,3 +1,6 @@
+#profile rgb value : #18191b
+
+
 name = ""
 if len(name) <= 3:
     name += "디코이름난독화"
