@@ -16,6 +16,7 @@ while result > 0:
     dec ^= result & 0xffffffff
     result = result >> 32
 print(bin(dec)[2:].zfill(32))
+print(hex(dec)[2:].zfill(8).upper())
 
 #version 2
 """
