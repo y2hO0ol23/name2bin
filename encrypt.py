@@ -1,4 +1,38 @@
+#version4
+name = "양윤혁"
+result = ""
+for i in name:
+    i = bin(ord(i))[2:]
+    t = 0
+    for j in range(1, len(i) - 1):
+        x = int("".join(i[:j]),2)
+        y = int("".join(i[j:]),2)
+        t ^= x ^ y ^ x*y
+    result += bin(t)[2:].zfill(16)
+
+for i in range(1,len(result)):
+    t = ""
+    for j in range(i):
+        t = result[j::i] + t
+    result = t
+result = int(result,2)
+
+dec = 0
+s = 1
+while result > 0:
+    if s == 1:
+        dec ^= result & 0xffffffff
+    else:
+        dec ^= int(bin(result & 0xffffffff)[2:][-1::-1],2)
+    s *= -1
+    result = result >> 32
+    
+print(dec)
+print(bin(dec)[2:].zfill(32))
+print(hex(dec)[2:].zfill(8).upper())
+
 #version3
+"""
 name = "익명"
 temp = ""
 for i in name:
@@ -17,6 +51,7 @@ while result > 0:
     result = result >> 32
 print(bin(dec)[2:].zfill(32))
 print(hex(dec)[2:].zfill(8).upper())
+"""
 
 #version 2
 """
