@@ -1,5 +1,5 @@
 #version4
-name = "양윤혁"
+name = "ㅁㄴㅇㄹ"
 result = ""
 for i in name:
     i = bin(ord(i))[2:]
